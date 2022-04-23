@@ -3,7 +3,7 @@ import { searchMovies } from './services/movies.js'
 import { Movies } from './Movies.jsx'
 import './App.css'
 
-function App () {
+export default function App () {
   const inputRef = useRef()
   const [results, setResults] = useState(null)
 
@@ -26,5 +26,3 @@ function App () {
     </>
   )
 }
-
-export default App

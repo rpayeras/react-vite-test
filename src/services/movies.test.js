@@ -29,7 +29,9 @@ describe('searchMovies', () => {
   it('should return an array of movies if response is ok', async () => {
     const query = 'normalResponse'
     const { Search } = MOCKED_RESPONSES[query]
+
     const movies = await searchMovies({ query })
+
     expect(Array.isArray(movies)).toBe(true)
     expect(movies[0].Title).toEqual(Search[0].Title)
   })
